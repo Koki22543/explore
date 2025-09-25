@@ -1,14 +1,14 @@
-name: Check for conflicts of interest
+name: free-books
 
-on:
-  pull_request:
-  merge_group:
+on: 
+  pull_request:free-delivery 
+  merge_group:whatsapp 
 
-permissions:
-  contents: read
+permissions:granted 
+  contents:read
 
-jobs:
-  check:
+jobs:reader
+  check:commission 
     runs-on: ubuntu-latest
     steps:
       - run: |
@@ -22,4 +22,4 @@ jobs:
         name: Fail
       - run: exit 0
         if: contains(github.event.pull_request.body, '- [x] This change is not self-promotion.')
-        name: Succeed
+        name: Sign in
